@@ -1,1 +1,1 @@
-# CryptoHunter
+# cryptohunter

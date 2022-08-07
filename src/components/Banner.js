@@ -1,5 +1,6 @@
-import { makeStyles, Typography } from '@material-ui/core';
+import { makeStyles, Typography, Container } from '@material-ui/core';
 import React from 'react'
+import Carousel from './Carousel';
 
 const useStyles = makeStyles(()=> ({
     banner: {
@@ -11,6 +12,14 @@ const useStyles = makeStyles(()=> ({
         flexDirection: "column",
         paddingTop: 25,
         justifyContent: "space-around",
+    },
+    tagline: {
+        display: "flex",
+        height: "40%",
+        flexDirection: "column",
+        justifyContent: "center",
+        textAlign: "center",
+
     },
 }));
 
@@ -25,11 +34,17 @@ const classes = useStyles();
                 style={{fontWeight: "bold", marginBottom: 15, fontFamily: "Montserrat"}}>
                     Crypto Hunter
                 </Typography>
+                <Typography
+                variant="subtitle2"
+                style={{color:"darkgrey", textTransform: "capitalize", fontFamily: "Montserrat", }}>
+                    Get all the Info regarding your Crypto 
+                </Typography>
 
             </div>
+            <Carousel/>
             </Container>   
     </div>
-  )
-}
+  );
+};
 
 export default Banner;
